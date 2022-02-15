@@ -20,11 +20,24 @@ library(usethis)
 use_git_config(user.name = "tesswin", user.email = "tesswin@gmail.com")
 edit_r_environ()
 use_github(protocol = "https", auth_token = Sys.getenv("GITHUB_PAT"))
-
 ```
 
+- parsing json 
 
 ```{r parsing_json}
+# install jsonlite package if required 
+
+# library(jsonlite)
+# json_data <- read_json("Video_Games_5.json")
+
+# json lite didnt work. Trying rjson package 
+
+library(rjson)
+json_data <- fromJSON(file = "Video_Games_5.json") # reading the json file 
+
+# converting the json_data into dataframe 
+json_data <- as.data.frame(json_data)
+# some issue only 2 observations got into the dataframe 
 
 
 
