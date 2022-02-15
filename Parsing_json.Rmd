@@ -1,0 +1,22 @@
+---
+title: "Parsing_json_tutorial"
+author: "Tesswin Thomas"
+date: "2/15/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Parsing json tutorial 
+
+- This tutorial is to efficiently parse json file 
+
+```{r parsing_json}
+
+
+
+```
