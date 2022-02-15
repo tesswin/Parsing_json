@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r github_connection}
 library(usethis)
 use_git_config(user.name = "tesswin", user.email = "tesswin@gmail.com")
-
+use_github(protocol = "https", auth_token = Sys.getenv("GITHUB_PAT"))
 ```
 
 
