@@ -15,6 +15,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - This tutorial is to efficiently parse json file 
 
+```{r github_connection}
+library(usethis)
+use_git_config(user.name = "tesswin", user.email = "tesswin@gmail.com")
+
+```
+
+
 ```{r parsing_json}
 
 
