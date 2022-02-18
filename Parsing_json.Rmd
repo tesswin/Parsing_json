@@ -27,18 +27,14 @@ use_github(protocol = "https", auth_token = Sys.getenv("GITHUB_PAT"))
 ```{r parsing_json}
 # install jsonlite package if required 
 
-# library(jsonlite)
-# json_data <- read_json("Video_Games_5.json")
+# tesswin_json file contain json data from amazon reviews. The supposedly json file is not working in any way unless each lines are treated as a separate json object using readLines() function. 
 
-# json lite didnt work. Trying rjson package 
 
-library(rjson)
 library(jsonlite)
-json_data <- fromJSON(file = "Video_Games_5.json") # reading the json file 
-
-# converting the json_data into dataframe 
+parse_data <- lapply(readLines("tesswin_json.json.txt"), fromJSON)
+json_data <- do.call(rbind, parse_data)
 json_data <- as.data.frame(json_data)
-# some issue only 2 observations got into the dataframe 
+
 
 
 
