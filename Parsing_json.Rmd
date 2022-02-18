@@ -33,6 +33,7 @@ use_github(protocol = "https", auth_token = Sys.getenv("GITHUB_PAT"))
 # json lite didnt work. Trying rjson package 
 
 library(rjson)
+library(jsonlite)
 json_data <- fromJSON(file = "Video_Games_5.json") # reading the json file 
 
 # converting the json_data into dataframe 
